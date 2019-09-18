@@ -21,8 +21,14 @@ public class ProblemSet1 {
          * 
          * What is the area (in square millimeters) of an 8.5-by-11-inch sheet of paper?
          */
-        
-        
+        	
+        double length = 11;
+        double width = 8.5;	
+        double cf = 25.4;
+        double area = length*width*cf;
+  
+    
+        System.out.println("\n"+area+ " millimeters \n");
         
         /*
          * Exercise 2.
