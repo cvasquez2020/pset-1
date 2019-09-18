@@ -24,8 +24,8 @@ public class ProblemSet1 {
         	
         double length = 11;
         double width = 8.5;	
-        double cf = 645.16;
-        double area = length*width*cf;
+        double cfIn2Mm2 = 645.16;
+        double area = length*width*cfIn2Mm2;
   
     	System.out.println("\n");
         System.out.printf("%,.2f",area);
@@ -37,7 +37,11 @@ public class ProblemSet1 {
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
         
-	// test        
+	double prmtrIn = 2*length + 2*width;
+	double cfInCm = 2.54;
+	double prmtrCm = cfInCm * prmtrIn;
+	System.out.println(prmtrCm);
+	        
         
         /*
          * Exercise 3.
