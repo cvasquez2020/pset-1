@@ -24,11 +24,12 @@ public class ProblemSet1 {
         	
         double length = 11;
         double width = 8.5;	
-        double cf = 25.4;
+        double cf = 645.16;
         double area = length*width*cf;
   
-    
-        System.out.println("\n"+area+ " millimeters \n");
+    	System.out.println("\n");
+        System.out.printf("%,.2f",area);
+        System.out.println(" square millimeters.\n");
         
         /*
          * Exercise 2.
