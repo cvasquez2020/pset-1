@@ -129,9 +129,33 @@ public class ProblemSet1 {
          * will I make this week?
          */
 
+        double monHours = 7.50;
+
+	double tuesHours = 8.00;
+	
+	double wedHours = 10.50;        
         
-        
-        /*
+	double thurHours = 9.50;
+	
+	double friHours = 6.00;
+
+	double satHours = 11.50;
+
+	double sunHours = 0.00;
+
+	double hourlyWage = 12.50;
+
+	double totalEarned = (monHours+tuesHours+wedHours+thurHours+friHours+satHours+sunHours)*hourlyWage;
+
+	System.out.println("\n");
+	
+	System.out.printf("$%.2f",totalEarned);
+	
+	System.out.println("."); 
+	
+	System.out.println("\n");
+
+	/*
          * Exercise 6.
          * 
          * What is my take-home pay each check?
