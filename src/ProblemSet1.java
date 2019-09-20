@@ -22,26 +22,41 @@ public class ProblemSet1 {
          * What is the area (in square millimeters) of an 8.5-by-11-inch sheet of paper?
          */
         	
-        double length = 11;
-        double width = 8.5;	
-        double cfIn2Mm2 = 645.16;
-        double area = length*width*cfIn2Mm2;
+        double lengthPaper = 11;
+        
+	double widthPaper= 8.5;	
+        
+	double cfIn2Mm2 = 645.16;
+        
+	double area = lengthPaper*widthPaper*cfIn2Mm2;
   
     	System.out.println("\n");
-        System.out.printf("%,.2f",area);
-        System.out.println(" square millimeters.\n");
         
+	System.out.printf("%,.2f",area);
+        
+	System.out.println(" square millimeters.");
+        
+	System.out.println("\n");
+
         /*
          * Exercise 2.
          * 
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
         
-	double prmtrIn = 2*length + 2*width;
+	double prmtrIn = 2*lengthPaper + 2*widthPaper;
+	
 	double cfInCm = 2.54;
+	
 	double prmtrCm = cfInCm * prmtrIn;
-	System.out.println(prmtrCm);
-	        
+	
+	System.out.println("\n");
+	
+	System.out.printf("%,.2f",prmtrCm);
+	
+	System.out.println(" cenitimeters.");
+	
+	System.out.println("\n");        
         
         /*
          * Exercise 3.
@@ -49,8 +64,16 @@ public class ProblemSet1 {
          * What is the length of the diagonal (in inches) between two corners on an 8.5-
          * by-11-inch sheet of paper?
          */
-        
-        
+        	
+	double diagonalLength = Math.sqrt(Math.pow(lengthPaper,2)+Math.pow(widthPaper,2));
+	
+	System.out.println("\n");
+	
+	System.out.printf("%,.2f",diagonalLength);
+	
+	System.out.println(" inches.");	
+	
+	System.out.println("\n");
 
         /*
          * Exercise 4.
@@ -60,17 +83,45 @@ public class ProblemSet1 {
          */
         
         int homework1 = 88;
+
         int homework2 = 91;
-        int homework3 = 0;
-        int quiz1 = 84;
-        int quiz2 = 89;
-        int quiz3 = 93;
-        int test1 = 74;
-        int test2 = 87;
-        int test3 = 82;
         
+	int homework3 = 0;
         
+	int quiz1 = 84;
         
+	int quiz2 = 89;
+        
+	int quiz3 = 93;
+        
+	int test1 = 74;
+        
+	int test2 = 87;
+        
+	int test3 = 82;
+        
+	double hwWeight = 0.15;
+	
+	double quizWeight = 0.35;
+	
+	double testWeight = 0.50;
+        
+        double avgHW = (homework1 + homework2 + homework3)/3.00;
+
+	double avgQuiz = (quiz1 + quiz2 + quiz3)/3.00;
+	
+	double avgTest = (test1 + test2 + test3)/3.00;
+
+	double mpGrade = (avgHW*hwWeight) + (avgQuiz*quizWeight) + (avgTest*testWeight);
+	
+	System.out.println("\n");
+	
+	System.out.printf("%.2f", mpGrade);
+	
+	System.out.println("%.");
+	
+	System.out.println("\n");
+
         /*
          * Exercise 5.
          * 
