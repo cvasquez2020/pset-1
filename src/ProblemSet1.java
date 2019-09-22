@@ -36,7 +36,6 @@ public class ProblemSet1 {
         
 	System.out.println(" square millimeters.");
         
-	System.out.println("\n");
 
         /*
          * Exercise 2.
@@ -55,8 +54,7 @@ public class ProblemSet1 {
 	System.out.printf("%,.2f",prmtrCm);
 	
 	System.out.println(" cenitimeters.");
-	
-	System.out.println("\n");        
+	   
         
         /*
          * Exercise 3.
@@ -73,7 +71,6 @@ public class ProblemSet1 {
 	
 	System.out.println(" inches.");	
 	
-	System.out.println("\n");
 
         /*
          * Exercise 4.
@@ -120,8 +117,6 @@ public class ProblemSet1 {
 	
 	System.out.println("%.");
 	
-	System.out.println("\n");
-
         /*
          * Exercise 5.
          * 
@@ -153,7 +148,6 @@ public class ProblemSet1 {
 	
 	System.out.println("."); 
 	
-	System.out.println("\n");
 
 	/*
          * Exercise 6.
@@ -162,7 +156,24 @@ public class ProblemSet1 {
          */
         
         
+	
+	
+	double salary = 117000;
         
+	double fedTax = 24.0;
+
+	double stateTax = 6.37;
+
+	double your401k = 7.0;
+
+	double takeHomeCheck = ((salary/24)*(1-(your401k/100))*(1-(stateTax/100))*(1-(fedTax/100))); 
+        
+	System.out.println("\n");
+
+	System.out.printf("$%,.2f", takeHomeCheck);
+        
+	System.out.println(".");
+ 
         /*
          * Exercise 7.
          * 
@@ -170,7 +181,20 @@ public class ProblemSet1 {
          * people will be on the last bus?
          */
         
-        
+        int students = 273;
+	
+	int teachers = 28;
+
+	int busCapacity = 54;
+	
+	int buses = (int) Math.ceil((double)(students+teachers)/busCapacity);
+	
+	int onLastBus = (int) (students+teachers)%busCapacity;
+
+	System.out.println("\n");
+	
+	System.out.println(buses+" buses are needed, with "+onLastBus+" passengers on the last bus.");
+	
         
         /*
          * Exercise 8.
