@@ -22,13 +22,15 @@ public class ProblemSet1 {
          * What is the area (in square millimeters) of an 8.5-by-11-inch sheet of paper?
          */
         	
-        double lengthPaper = 11;
+        double PAPER_LENGTH = 11;
         
-	double widthPaper= 8.5;	
+	double PAPER_WIDTH = 8.5;	
         
-	double cfIn2Mm2 = 645.16;
+	double IN_MM = 25.4;
+
+	double area;
         
-	double area = lengthPaper*widthPaper*cfIn2Mm2;
+	area = PAPER_LENGTH*PAPER_WIDTH*Math.pow(IN_MM,2);
   
     	System.out.println("\n");
         
@@ -43,11 +45,11 @@ public class ProblemSet1 {
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
         
-	double prmtrIn = 2*lengthPaper + 2*widthPaper;
+	double PERIMETER_IN = 2*PAPER_LENGTH + 2*PAPER_WIDTH;
 	
-	double cfInCm = 2.54;
+	double IN_CM = 2.54;
 	
-	double prmtrCm = cfInCm * prmtrIn;
+	double prmtrCm = IN_CM * PERIMETER_IN;
 	
 	System.out.println("\n");
 	
@@ -63,7 +65,7 @@ public class ProblemSet1 {
          * by-11-inch sheet of paper?
          */
         	
-	double diagonalLength = Math.sqrt(Math.pow(lengthPaper,2)+Math.pow(widthPaper,2));
+	double diagonalLength = Math.sqrt(Math.pow(PAPER_LENGTH,2)+Math.pow(PAPER_WIDTH,2));
 	
 	System.out.println("\n");
 	
@@ -97,11 +99,11 @@ public class ProblemSet1 {
         
 	int test3 = 82;
         
-	double hwWeight = 0.15;
+	double HW_WEIGHT = 0.15;
 	
-	double quizWeight = 0.35;
+	double QZ_WEIGHT = 0.35;
 	
-	double testWeight = 0.50;
+	double TEST_WEIGHT = 0.50;
         
         double avgHW = (homework1 + homework2 + homework3)/3.00;
 
@@ -109,7 +111,7 @@ public class ProblemSet1 {
 	
 	double avgTest = (test1 + test2 + test3)/3.00;
 
-	double mpGrade = (avgHW*hwWeight) + (avgQuiz*quizWeight) + (avgTest*testWeight);
+	double mpGrade = (avgHW*HW_WEIGHT) + (avgQuiz*QZ_WEIGHT) + (avgTest*TEST_WEIGHT);
 	
 	System.out.println("\n");
 	
@@ -123,8 +125,8 @@ public class ProblemSet1 {
          * I make $12.50/hour working as a cashier at a local supermarket. How much money
          * will I make this week?
          */
-
-        double monHours = 7.50;
+   
+	double monHours = 7.50;
 
 	double tuesHours = 8.00;
 	
@@ -138,15 +140,16 @@ public class ProblemSet1 {
 
 	double sunHours = 0.00;
 
-	double hourlyWage = 12.50;
+	double HOURLY_WAGE = 12.50;
 
-	double totalEarned = (monHours+tuesHours+wedHours+thurHours+friHours+satHours+sunHours)*hourlyWage;
+	double totalEarned = (monHours+tuesHours+wedHours+thurHours+friHours+satHours+sunHours)*HOURLY_WAGE;
 
 	System.out.println("\n");
 	
 	System.out.printf("$%.2f",totalEarned);
 	
 	System.out.println("."); 
+	
 	
 
 	/*
@@ -158,19 +161,19 @@ public class ProblemSet1 {
         
 	
 	
-	double salary = 117000;
+	double SALARY = 117000;
         
-	double fedTax = 24.0;
+	double FED_TAX = 24.0;
 
-	double stateTax = 6.37;
+	double STATE_TAX = 6.37;
 
-	double your401k = 7.0;
+	double YOUR_401K = 7.0;
 
-	double takeHomeCheck = ((salary/24)*(1-(your401k/100))*(1-(stateTax/100))*(1-(fedTax/100))); 
+	double TAKE_HOME_CHECK = ((SALARY/24)*(1-(YOUR_401K/100))*(1-(STATE_TAX/100))*(1-(FED_TAX/100))); 
         
 	System.out.println("\n");
 
-	System.out.printf("$%,.2f", takeHomeCheck);
+	System.out.printf("$%,.2f", TAKE_HOME_CHECK);
         
 	System.out.println(".");
  
@@ -181,15 +184,15 @@ public class ProblemSet1 {
          * people will be on the last bus?
          */
         
-        int students = 273;
+        int NO_OF_STUDENTS = 273;
 	
-	int teachers = 28;
+	int NO_OF_TEACHERS= 28;
 
-	int busCapacity = 54;
+	int BUS_CAPACITY = 54;
 	
-	int buses = (int) Math.ceil((double)(students+teachers)/busCapacity);
+	int buses = (int) Math.ceil((double)(NO_OF_STUDENTS+NO_OF_TEACHERS)/BUS_CAPACITY);
 	
-	int onLastBus = (int) (students+teachers)%busCapacity;
+	int onLastBus = (int) (NO_OF_STUDENTS+NO_OF_TEACHERS)%BUS_CAPACITY;
 
 	System.out.println("\n");
 	
@@ -202,7 +205,19 @@ public class ProblemSet1 {
          * What is the surface area of a standard Cornhole board?
          */
         
+	double LENGTH_CORN_BRD = 48;
+
+	double WIDTH_CORN_BRD = 24;
+
+	double DIAMETER = 6;
+
+	double surfaceArea = LENGTH_CORN_BRD*WIDTH_CORN_BRD - Math.PI*Math.pow((DIAMETER/2),2);
         
+	System.out.println("\n");
+
+	System.out.printf("%,.2f", surfaceArea);
+	
+	System.out.println(" square inches.");
         
         /*
          * Exercise 9.
@@ -210,7 +225,28 @@ public class ProblemSet1 {
          * Are the years 2020, 2100, and 2400 leap years?
          */
         
-        
+	System.out.println("\n");
+
+        int year;
+	
+	year = 2020;
+
+	boolean leapYear = year%4 == 0 && (year%100 != 0 || year%400 == 0);
+
+	System.out.println(year+" is a leap year..."+leapYear+".");
+	
+	year = 2100;
+
+	leapYear = year%4 == 0 && (year%100 != 0 || year%400 == 0);
+	
+	System.out.println(year+" is a leap year..."+leapYear+".");
+	
+	year = 2400;
+
+	leapYear = year%4 == 0 && (year%100 != 0 || year%400 == 0);
+	
+	System.out.println(year+" is a leap year..."+leapYear+".");
+	
         
         /*
          * Exercise 10.
