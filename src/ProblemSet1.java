@@ -55,7 +55,7 @@ public class ProblemSet1 {
 	
 	System.out.printf("%,.2f",prmtrCm);
 	
-	System.out.println(" cenitimeters.");
+	System.out.println(" centimeters.");
 	   
         
         /*
@@ -254,7 +254,18 @@ public class ProblemSet1 {
          * What is the wind chill?
          */
         
-        
+        double TEMPERATURE = 38;
+
+	double WIND_SPEED = 14;
+	
+	double windChill = 35.74 + 0.6215*TEMPERATURE + (0.4275*TEMPERATURE - 35.75)*Math.pow(WIND_SPEED,0.16);
+	
+	System.out.println("\n");
+	
+	System.out.printf("%,.1f", windChill);
+
+	System.out.println(" degrees.");
+
         
     }
 }
