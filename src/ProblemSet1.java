@@ -25,20 +25,20 @@ public class ProblemSet1 {
         double PAPER_LENGTH = 11;
         
 	double PAPER_WIDTH = 8.5;	
-        
-	double IN_MM = 25.4;
+	        
+	double IN_TO_MM = 25.4;
 
-	double area;
+	double areaOfPaper;
         
-	area = PAPER_LENGTH*PAPER_WIDTH*Math.pow(IN_MM,2);
-  
+	areaOfPaper = PAPER_LENGTH*PAPER_WIDTH*Math.pow(IN_TO_MM,2);
+	  
     	System.out.println("\n");
         
-	System.out.printf("%,.2f",area);
+	System.out.printf("%,.2f",areaOfPaper);
         
 	System.out.println(" square millimeters.");
-        
-
+	        
+	
         /*
          * Exercise 2.
          * 
@@ -47,13 +47,13 @@ public class ProblemSet1 {
         
 	double PERIMETER_IN = 2*PAPER_LENGTH + 2*PAPER_WIDTH;
 	
-	double IN_CM = 2.54;
+	double IN_TO_CM = 2.54;
 	
-	double prmtrCm = IN_CM * PERIMETER_IN;
+	double PERIMETER_CM = IN_TO_CM * PERIMETER_IN;
 	
 	System.out.println("\n");
 	
-	System.out.printf("%,.2f",prmtrCm);
+	System.out.printf("%,.2f",PERIMETER_CM);
 	
 	System.out.println(" centimeters.");
 	   
@@ -265,7 +265,8 @@ public class ProblemSet1 {
 	System.out.printf("%,.1f", windChill);
 
 	System.out.println(" degrees.");
+	
+	System.out.println("\n");
 
-        
     }
 }
